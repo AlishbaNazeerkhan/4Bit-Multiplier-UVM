@@ -27,14 +27,6 @@ run -all
 <p align="center">
     <img src="screenshots/image.png" alt="Block Diagram" width="600">
 </p>
-## 📊 Waveform & Verification Results
-The final verified waveform confirms correct operation:
-
-Inputs a and b change every 50ns.
-
-The output y correctly reflects the 8-bit product of a and b.
-
-The scoreboard reports 0 mismatches and the test ends with a UVM_FATAL or clean finish.
 
 ## 📊 Waveform & Verification Results
 
