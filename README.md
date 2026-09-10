@@ -22,7 +22,11 @@ add wave -position insertpoint sim:/tb_top/dut/*
 #### 5. Run the simulation
 run -all
 
+## Wavwform Image
 
+<p align="center">
+    <img src="screenshots/image.png" alt="Block Diagram" width="600">
+</p>
 ## 📊 Waveform & Verification Results
 The final verified waveform confirms correct operation:
 
