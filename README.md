@@ -51,6 +51,6 @@ Time (ns)   a (hex)   b (hex)   Expected y (hex)   Actual y (hex)   Status
 120         8         d         68                 68               PASS
 ```
 
-### 🛠 Prerequisites \
+### 🛠 Prerequisites 
 Siemens QuestaSim (or compatible simulator like VCS, Xcelium)\
 UVM 1.2 or higher
