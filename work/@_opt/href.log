@@ -1,0 +1,10 @@
+BEGIN 3:mul_if:fast__2:work
+    b :  1:tb_top:fast:work
+    a :  1:tb_top:fast:work
+    y :  1:tb_top:fast:work
+END 
+BEGIN 3:mul_if:fast__1:work
+    b :  1:mul_pkg:fast:work
+    y :  1:mul_pkg:fast:work
+    a :  1:mul_pkg:fast:work
+END 

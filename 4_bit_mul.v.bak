@@ -1,0 +1,9 @@
+module 4_bit_mul(
+input [3:0] a,
+input [3:0] b,
+output [7:0] result
+);
+
+assign result = a * b;
+
+endmodule

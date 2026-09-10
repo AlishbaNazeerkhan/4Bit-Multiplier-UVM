@@ -1,0 +1,35 @@
+//Two tasks of driver:
+//1- catch packet from sequencer and convert it into signals.
+//2- Drive signals to dut 
+class driver extends uvm_driver #(transaction);
+  `uvm_component_utils(driver); //register class to factory
+
+  transaction tr;
+  virtual mul_if mif;
+
+  function new(input string path = "driver", uvm_component parent = null);
+    super.new(path, parent);
+  endfunction
+
+  virtual function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+    if(!uvm_config_db#(virtual mul_if)::get(this, "", "mif", mif))
+      `uvm_error("drv", "Unable to access an interface"); 
+  endfunction
+
+  virtual task run_phase(uvm_phase phase);
+    tr = transaction::type_id::create("tr");
+    forever begin
+      seq_item_port.get_next_item(tr);
+      mif.a <= tr.a;
+      mif.b <= tr.b; 
+      `uvm_info("DRV", $sformatf("a : %0d b : %0d y : %0d", tr.a, tr.b, tr.y), UVM_NONE);
+      seq_item_port.item_done();
+      #20;
+    end
+  endtask
+
+endclass
+
+
+

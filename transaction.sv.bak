@@ -1,0 +1,12 @@
+class transaction extends uvm_sequence_item;
+
+'uvm_object_utils(transaction) //Register class to factory
+
+randc bit [3:0] a;
+randc bit [3:0] b;
+bit [7:0] y;
+
+function new(input string path= "transaction");
+super.new(path);
+endfunction  
+endclass

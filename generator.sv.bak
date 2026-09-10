@@ -1,0 +1,19 @@
+class generator extends uvm_sequence#(transaction); // Generator is working on the transaction data
+`uvm_object_utils(generator) //register class to factory
+transaction tr;
+
+function new(input string path ="generator");
+super.new(path);
+endfunction
+
+virtual task body();
+repeat(15)
+begin
+	tr = transaction::type_id::create("tr");
+	start_item(tr); //Start the communication
+	assert(tr.randomize()) else $display("Randomization Failed");
+	`uvm_info("SEQ", $sformatf("a: %0d b:%0d y: %0d", tr.a, tr.b, tr.y),UVM_NONE);
+	finish_item(tr); //Communicate the data to sequencer by calling this method
+end
+endtask
+endclass

@@ -1,0 +1,13 @@
+package mul_pkg;
+`include "uvm_macros.svh"
+import uvm_pkg::*;
+`include "mul_if.sv"
+`include "transaction.sv"
+`include "generator.sv"
+`include "driver.sv"
+`include "monitor.sv"
+`include "agent.sv"
+`include "scoreboard.sv"
+`include "environment.sv"
+`include "test_class.sv"
+endpackage
