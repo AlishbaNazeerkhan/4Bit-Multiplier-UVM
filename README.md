@@ -1,6 +1,6 @@
 # 4-Bit Multiplier UVM Verification
 ## Project Overview
-This project implements a 4-bit × 4-bit combinational multiplier in Verilog and verifies it using a complete UVM (Universal Verification Methodology) testbench in SystemVerilog.
+This project implements a 4-bit × 4-bit combinational multiplier in Verilog and verifies it using a complete UVM (Universal Verification Methodology) testbench.
 
 The design takes two 4-bit inputs (a and b) and produces an 8-bit output (y), which is the product of the two inputs. Since the DUT is purely combinational, no clock is required for the DUT itself; however, the UVM testbench uses delay-based synchronization to drive inputs and sample outputs.
 
@@ -32,11 +32,11 @@ run -all
 
 The final verified waveform confirms correct operation:
 
-Inputs a and b change every 50ns.
+Inputs a and b change every 20ns.
 
 The output y correctly reflects the 8-bit product of a and b.
 
-The scoreboard reports 0 mismatches and the test ends with a UVM_FATAL or clean finish.
+The scoreboard reports 0 mismatches and the test ends with a clean finish.
 
 ### Test Results
 
